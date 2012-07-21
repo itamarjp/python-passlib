@@ -1,6 +1,6 @@
 Name:		python-passlib
 Version:	1.5.3
-Release:	2%{?dist}
+Release:	3%{?dist}
 Summary:	Comprehensive password hashing framework supporting over 20 schemes
 
 License:	BSD and Beerware and Copyright only
@@ -41,6 +41,9 @@ multi-user application.
 
 
 %changelog
+* Sat Jul 21 2012 Fedora Release Engineering <rel-eng@lists.fedoraproject.org> - 1.5.3-3
+- Rebuilt for https://fedoraproject.org/wiki/Fedora_18_Mass_Rebuild
+
 * Sat Jan 14 2012 Fedora Release Engineering <rel-eng@lists.fedoraproject.org> - 1.5.3-2
 - Rebuilt for https://fedoraproject.org/wiki/Fedora_17_Mass_Rebuild
 
