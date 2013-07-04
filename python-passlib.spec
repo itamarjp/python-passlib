@@ -1,11 +1,11 @@
 Name:		python-passlib
-Version:	1.5.3
-Release:	4%{?dist}
+Version:	1.6.1
+Release:	1%{?dist}
 Summary:	Comprehensive password hashing framework supporting over 20 schemes
 
 License:	BSD and Beerware and Copyright only
 URL:		http://passlib.googlecode.com
-Source0:	http://passlib.googlecode.com/files/passlib-1.5.3.tar.gz
+Source0:	https://pypi.python.org/packages/source/p/passlib/passlib-%{version}.tar.gz
 
 BuildArch:	noarch
 BuildRequires:	python2-devel
@@ -41,6 +41,9 @@ multi-user application.
 
 
 %changelog
+* Thu Jul 04 2013 Alan Pevec <apevec@redhat.com> - 1.6.1-1
+- update to 1.6.1
+
 * Thu Feb 14 2013 Fedora Release Engineering <rel-eng@lists.fedoraproject.org> - 1.5.3-4
 - Rebuilt for https://fedoraproject.org/wiki/Fedora_19_Mass_Rebuild
 
