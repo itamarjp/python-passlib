@@ -48,8 +48,8 @@ multi-user application.
 Summary:	Comprehensive password hashing framework supporting over 20 schemes
 %{?python_provide:%python_provide python3-passlib}
 
-BuildRequires:	python2-devel
-BuildRequires:	python-setuptools
+BuildRequires:	python3-devel
+BuildRequires:	python3-setuptools
 
 %description -n python3-passlib
 Passlib is a password hashing library for Python 2 & 3, which provides
