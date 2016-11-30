@@ -3,13 +3,13 @@
 %endif
 
 Name:		python-passlib
-Version:	1.6.5
-Release:	4%{?dist}
+Version:	1.7.0
+Release:	1%{?dist}
 Summary:	Comprehensive password hashing framework supporting over 20 schemes
 
 License:	BSD and Beerware and Copyright only
 URL:		https://bitbucket.org/ecollins/passlib
-Source0:	https://pypi.python.org/packages/source/p/passlib/passlib-%{version}.tar.gz
+Source0:	https://pypi.io/packages/source/p/passlib/passlib-%{version}.tar.gz
 BuildArch:	noarch
 
 # docs generation requires python-cloud-sptheme, which isn't packaged yet.
@@ -90,6 +90,9 @@ multi-user application.
 %endif
 
 %changelog
+* Wed Nov 30 2016 Alan Pevec <alan.pevec@redhat.com> 1.7.0-1
+- Update to 1.7.0
+
 * Tue Jul 19 2016 Fedora Release Engineering <rel-eng@lists.fedoraproject.org> - 1.6.5-4
 - https://fedoraproject.org/wiki/Changes/Automatic_Provides_for_Python_RPM_Packages
 
