@@ -4,7 +4,7 @@
 
 Name:		python-passlib
 Version:	1.7.0
-Release:	1%{?dist}
+Release:	2%{?dist}
 Summary:	Comprehensive password hashing framework supporting over 20 schemes
 
 License:	BSD and Beerware and Copyright only
@@ -90,6 +90,9 @@ multi-user application.
 %endif
 
 %changelog
+* Mon Dec 19 2016 Miro Hrončok <mhroncok@redhat.com> - 1.7.0-2
+- Rebuild for Python 3.6
+
 * Wed Nov 30 2016 Alan Pevec <alan.pevec@redhat.com> 1.7.0-1
 - Update to 1.7.0
 
