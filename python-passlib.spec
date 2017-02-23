@@ -4,7 +4,7 @@
 
 Name:		python-passlib
 Version:	1.7.0
-Release:	3%{?dist}
+Release:	4%{?dist}
 Summary:	Comprehensive password hashing framework supporting over 20 schemes
 
 License:	BSD and Beerware and Copyright only
@@ -71,6 +71,9 @@ multi-user application.
 %endif
 
 %install
+# passlib setup.py append HG revision to the end of version by default
+# which makes StrictVersion checks complaining
+export PASSLIB_SETUP_TAG_RELEASE="no"
 %{__python2} setup.py install -O1 --skip-build --root %{buildroot}
 
 %if 0%{?with_python3}
@@ -90,6 +93,9 @@ multi-user application.
 %endif
 
 %changelog
+* Thu Feb 23 2017 Haïkel Guémar <hguemar@fedoraproject.org> - 1.7.0-4
+- Fix eggs-info generation
+
 * Sat Feb 11 2017 Fedora Release Engineering <releng@fedoraproject.org> - 1.7.0-3
 - Rebuilt for https://fedoraproject.org/wiki/Fedora_26_Mass_Rebuild
 
