@@ -4,7 +4,7 @@
 
 Name:		python-passlib
 Version:	1.7.0
-Release:	6%{?dist}
+Release:	7%{?dist}
 Summary:	Comprehensive password hashing framework supporting over 20 schemes
 
 License:	BSD and Beerware and Copyright only
@@ -93,6 +93,9 @@ export PASSLIB_SETUP_TAG_RELEASE="no"
 %endif
 
 %changelog
+* Fri Feb 09 2018 Fedora Release Engineering <releng@fedoraproject.org> - 1.7.0-7
+- Rebuilt for https://fedoraproject.org/wiki/Fedora_28_Mass_Rebuild
+
 * Thu Jan 04 2018 Troy Dawson <tdawson@redhat.com> - 1.7.0-6
 - Update conditional
 
