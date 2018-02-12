@@ -4,7 +4,7 @@
 
 Name:		python-passlib
 Version:	1.7.0
-Release:	7%{?dist}
+Release:	8%{?dist}
 Summary:	Comprehensive password hashing framework supporting over 20 schemes
 
 License:	BSD and Beerware and Copyright only
@@ -14,8 +14,8 @@ BuildArch:	noarch
 
 # docs generation requires python-cloud-sptheme, which isn't packaged yet.
 # so we won't generate the docs yet.
-#BuildRequires:	python-sphinx >= 1.0
-#BuildRequires:	python-cloud-sptheme
+#BuildRequires:	python2-sphinx >= 1.0
+#BuildRequires:	python2-cloud-sptheme
 
 %description
 Passlib is a password hashing library for Python 2 & 3, which provides
@@ -33,7 +33,7 @@ Provides:    python-passlib = %{version}-%{release}
 Obsoletes:    python-passlib < 1.6.5-1
 
 BuildRequires:	python2-devel
-BuildRequires:	python-setuptools
+BuildRequires:	python2-setuptools
 
 %description -n python2-passlib
 Passlib is a password hashing library for Python 2 & 3, which provides
@@ -93,6 +93,10 @@ export PASSLIB_SETUP_TAG_RELEASE="no"
 %endif
 
 %changelog
+* Mon Feb 12 2018 Iryna Shcherbina <ishcherb@redhat.com> - 1.7.0-8
+- Update Python 2 dependency declarations to new packaging standards
+  (See https://fedoraproject.org/wiki/FinalizingFedoraSwitchtoPython3)
+
 * Fri Feb 09 2018 Fedora Release Engineering <releng@fedoraproject.org> - 1.7.0-7
 - Rebuilt for https://fedoraproject.org/wiki/Fedora_28_Mass_Rebuild
 
