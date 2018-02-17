@@ -1,10 +1,10 @@
-%if 0%{?fedora} || 0%{?rhel} > 7
+%if 0%{?fedora} || 0%{?rhel} >= 7
 %global with_python3 1
 %endif
 
 Name:		python-passlib
 Version:	1.7.0
-Release:	8%{?dist}
+Release:	9%{?dist}
 Summary:	Comprehensive password hashing framework supporting over 20 schemes
 
 License:	BSD and Beerware and Copyright only
@@ -44,14 +44,14 @@ found in /etc/shadow, to providing full-strength password hashing for
 multi-user application.
 
 %if 0%{?with_python3}
-%package -n python3-passlib
+%package -n python%{python3_pkgversion}-passlib
 Summary:	Comprehensive password hashing framework supporting over 20 schemes
-%{?python_provide:%python_provide python3-passlib}
+%{?python_provide:%python_provide python%{python3_pkgversion}-passlib}
 
-BuildRequires:	python3-devel
-BuildRequires:	python3-setuptools
+BuildRequires:	python%{python3_pkgversion}-devel
+BuildRequires:	python%{python3_pkgversion}-setuptools
 
-%description -n python3-passlib
+%description -n python%{python3_pkgversion}-passlib
 Passlib is a password hashing library for Python 2 & 3, which provides
 cross-platform implementations of over 20 password hashing algorithms,
 as well as a framework for managing existing password hashes. It's
@@ -86,13 +86,17 @@ export PASSLIB_SETUP_TAG_RELEASE="no"
 %{python2_sitelib}/*
 
 %if 0%{?with_python3}
-%files -n python3-passlib
+%files -n python%{python3_pkgversion}-passlib
 %doc README
 %license LICENSE
 %{python3_sitelib}/*
 %endif
 
 %changelog
+* Sat Feb 17 2018 Itamar Reis Peixoto  <itamar@ispbrasil.com.br> - 1.7.0-9
+- make spec file compatible with epel7
+- build for python 3 on epel7
+
 * Mon Feb 12 2018 Iryna Shcherbina <ishcherb@redhat.com> - 1.7.0-8
 - Update Python 2 dependency declarations to new packaging standards
   (See https://fedoraproject.org/wiki/FinalizingFedoraSwitchtoPython3)
